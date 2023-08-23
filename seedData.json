@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "flavor": "Chocolate",
+    "instructions": "leave by the front door"
+  },
+  {
+    "id": 2,
+    "flavor": "Vanilla",
+    "instructions": "pick up tomorrow"
+  },
+  {
+    "id": 3,
+    "flavor": "Red Velvet",
+    "instructions": "no frosting"
+  },
+  {
+    "id": 4,
+    "flavor": "Chocolate",
+    "instructions": "extra frosting"
+  },
+  {
+    "id": 5,
+    "flavor": "Chocolate",
+    "instructions": "leave by the front door"
+  },
+  {
+    "id": 6,
+    "flavor": "Strawberry",
+    "instructions": "call before delivering"
+  },
+  {
+    "id": 7,
+    "flavor": "Marble",
+    "instructions": "super secret surprise instructions"
+  },
+  {
+    "id": 8,
+    "flavor": "Strawberry",
+    "instructions": "this is for my cat, is that bad?"
+  }
+]
