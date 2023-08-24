@@ -5,7 +5,7 @@ const PORT = 4000
 const routes = require('./routes');
 app.use(express.json())
 
-app.use('/users', routes.user)
+app.use('/user', routes.user)
 app.use('/cupcakes', routes.cupcake);
 
 // start the server

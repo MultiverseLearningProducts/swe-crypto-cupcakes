@@ -1,6 +1,8 @@
+const jwt = require('jsonwebtoken');
 const route = require('express').Router()
 const basicAuth = require('../middleware/basicAuth')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const authorize = require('../middleware/authorize');
 
 // array to store users
 const users = []
@@ -31,10 +33,9 @@ route.post('/', basicAuth, async (req, res) => {
 })
 
 /**
- * BONUS:
- * Get the user specified by the Authorization header
+ * Sign in a user
  */
-route.get('/', basicAuth, async (req, res) => {
+route.post('/login', basicAuth, async (req, res) => {
   // get the user from the database
   const user = users.find(user => user.email === req.user.email)
 
@@ -50,8 +51,22 @@ route.get('/', basicAuth, async (req, res) => {
     return res.status(401).json({ error: 'Incorrect password' })
   }
 
-  // don't send back the hashed password
-  res.json({ id: user.id, email: user.email })
+  // make a payload
+  const payload = { id: user.id, email: user.email }
+
+  // sign and encode the payload to create the token
+  const accessToken = jwt.sign(payload, process.env['TOKEN_SECRET'])
+
+  // send the token back for storage on the client
+  res.json({ accessToken })
+})
+
+/**
+ * BONUS:
+ * Get the user specified by the Authorization header
+ */
+route.get('/', authorize, async (req, res) => {
+  res.json(req.user)
 })
 
 module.exports = route
