@@ -1,6 +1,6 @@
 # SWE Crypto Cupcakes
 
-Welcome to Crypto Cupcakes! The feature branches in this repo represent the evolution of a sample app. Each week we can demo a new branch, look at what has changed and why:
+Welcome to SWE Crypto Cupcakes! The feature branches in this repo represent the evolution of a sample app. Each week we can demo a new branch, look at what has changed and why:
 
 1. `cupcakes-api`
 2. `security`
