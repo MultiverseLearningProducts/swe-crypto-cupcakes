@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const authorize = require('../middleware/authorize');
 const {encrypt, decrypt} = require('../utils/encrypt');
+const { requiresAuth } = require('express-openid-connect')
 
 // array to store cupcakes
 const cupcakes = require('./seedData.json')
@@ -9,7 +9,7 @@ const cupcakes = require('./seedData.json')
 let id = cupcakes.length
 
 // create a new cupcake
-router.post('/', authorize, (req, res) => {
+router.post('/', requiresAuth(), (req, res) => {
   const { flavor, instructions } = req.body
 
   // basic validation
@@ -30,7 +30,7 @@ router.post('/', authorize, (req, res) => {
 })
 
 // get all cupcakes
-router.get('/', authorize, (req, res) => {
+router.get('/', requiresAuth(), (req, res) => {
   const { flavor } = req.query
 
   const decodedCupcakes = cupcakes.map(cupcake => ({
@@ -48,7 +48,7 @@ router.get('/', authorize, (req, res) => {
 })
 
 // get a snippet by ID
-router.get('/:id', authorize, (req, res) => {
+router.get('/:id', requiresAuth(), (req, res) => {
   const cupcakeId = parseInt(req.params.id)
   const cupcake = cupcakes.find(cupcake => cupcake.id === cupcakeId)
 
