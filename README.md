@@ -1,7 +1,7 @@
 # SWE Crypto Cupcakes
 
 This branch implements a very basic API which allows users to `POST` and `GET`
-code snippets.
+cupcakes.
 
 A cupcake looks like this
 
