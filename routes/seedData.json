@@ -2,41 +2,41 @@
   {
     "id": 1,
     "flavor": "Chocolate",
-    "instructions": "fbb528a108b6218009b08011872b302c:3a5abbb0eb3773458087bc6403168a5779f007c360174fcc1c02f324d04d1fa2"
+    "instructions": "d263fd4bc540c5391d7e9f514f0a530a:6317aefef0d5ad0a7fe773e61da526e75cd76c180ebb44ae835799bd66fd1b98"
   },
   {
     "id": 2,
     "flavor": "Vanilla",
-    "instructions": "7595a66b52c0e24a4339e6c366a5d066:94b1c00d4708fb583c74de3d7a27af80de3ecaf44670dbc14d36077e1d0aaf8d"
+    "instructions": "66cf0f80f3b52fd44ee55a0aab1c729a:5927b21310ff1fe09a4ba06223649f071ac8b2cf7a39255e5f0b39685756f0fd"
   },
   {
     "id": 3,
     "flavor": "Red Velvet",
-    "instructions": "c08993325afb2c23fea7de6001b14115:868f4f141578930bc15a836fb07917e8"
+    "instructions": "b8b68a6fa4a9f426df417bab51c54db4:08798c60a93a0eab8b1d679083d66aa9"
   },
   {
     "id": 4,
     "flavor": "Chocolate",
-    "instructions": "9ea474afba00063e2532fa987698447e:ca10c303821849db933640fcc9eccbb0"
+    "instructions": "1a64486ca21f8ce362a534bc13b2eba3:4c18c4b4e287331e114242377cc02f34"
   },
   {
     "id": 5,
     "flavor": "Chocolate",
-    "instructions": "fbb528a108b6218009b08011872b302c:3a5abbb0eb3773458087bc6403168a5779f007c360174fcc1c02f324d04d1fa2"
+    "instructions": "d263fd4bc540c5391d7e9f514f0a530a:6317aefef0d5ad0a7fe773e61da526e75cd76c180ebb44ae835799bd66fd1b98"
   },
   {
     "id": 6,
     "flavor": "Strawberry",
-    "instructions": "4ddd92dc4a02cd809d829124e01ee3b5:1321e128043e819289bb5a4be0c2f34e1ae11b50a866abfb20fb905400a347f9"
+    "instructions": "c3d6c236007717e7ca9a630e93f85deb:0e9414671baee46b165fde89b33e87f26a6f5453223a68817062f998ab733347"
   },
   {
     "id": 7,
     "flavor": "Marble",
-    "instructions": "e01788beb78dfff1ba020738f118b265:2e467f21aeaa72757f9f5c0efe1638a2c015f6de17e609addb5801df75914f6279c0d554b714a79f51fdd899451b8c1f"
+    "instructions": "6d487b65bee9af794e2fe31a4eecf993:30c3867ac3f499cda4381f4d15f9c6244f3e1860a388aab2f90f92a29e3c70e8d8254cc034f90e49f907aedadbb96ef7"
   },
   {
     "id": 8,
     "flavor": "Strawberry",
-    "instructions": "da5ec95d19637de851b537193e535fe1:aa718257605a07c4822319e1c4286101c64d0720c50ba3582e148abc6666787814bd5fb3eb6b2badf6a221750295ece3"
+    "instructions": "23a6c0f3fe855bf029c88d8423834618:d95c18389dd19780958f3b5664270b35a417368aea95128f373a13a509f6319fbc06ad8c1d08e8495d7fe88f4e6f1d03"
   }
 ]
