@@ -39,7 +39,7 @@ In this new token based world, we create a user and then sign them in.
 ```bash
 curl -v -XPOST \
 -H 'Authorization: Basic dGVzdEB1c2VyLmNvbTpwYXNzd29yZDEyMw==' \
-'http://localhost:4000/users' | json_pp
+'http://localhost:4000/user' | json_pp
 ```
 
 creates the user, and
@@ -47,7 +47,7 @@ creates the user, and
 ```bash
 curl -v -XPOST \
 -H 'Authorization: Basic dGVzdEB1c2VyLmNvbTpwYXNzd29yZDEyMw==' \
-'http://localhost:4000/users/login' | json_pp
+'http://localhost:4000/user/login' | json_pp
 ```
 
 signs them in. The latter command should provide you with an accessToken in the
