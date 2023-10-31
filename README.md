@@ -2,7 +2,7 @@
 
 This branch removes some of the work we did last time: we no longer have `/user`
 endpoints for signing up, logging in, or logging out. These are now provided by
-the Auth0 SDK `express-openid-connect`. This refactor should allow us to sign in
+the Auth0 SDK (software development kit) `express-openid-connect`. This refactor should allow us to sign in
 with Google, and benefit from all the goodness Auth0 provides: user management
 database, account merging, premade middleware and UI, no-hassle security updates
 and a team of security experts monitoring the landscape at all times.
