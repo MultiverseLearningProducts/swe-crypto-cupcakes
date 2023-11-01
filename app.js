@@ -4,6 +4,8 @@ const PORT = 4000
 
 app.use(express.json())
 
+app.set("json spaces", 2);
+
 // array to store cupcakes
 const cupcakes = require('./seedData.json')
 
@@ -34,7 +36,14 @@ app.post('/cupcakes', (req, res) => {
 // get all cupcakes
 app.get('/cupcakes', (req, res) => {
   const { flavor } = req.query
+  const { sort } = req.query
 
+  if (sort) {
+    const sorted = [...cupcakes].sort((a, b) => 
+      a[sort].localeCompare(b[sort]) 
+    );
+    res.json(sorted);
+  }
   if (flavor) {
     const filteredCupcakes = cupcakes.filter(
       cupcake => cupcake.flavor.toLowerCase() === flavor.toLowerCase()
