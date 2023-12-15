@@ -21,7 +21,7 @@ const config = {
   auth0Logout: true,
   secret: process.env['TOKEN_SECRET'],
   baseURL: 'http://localhost:4000',
-  clientID: 'r6k6Qugzo6DmFAuSjjmwtkiE9WlexKzr',
+  clientID: 'Fo2HohriMWn6bsc3FQKH0y5cB3H0uxZI',
   issuerBaseURL: 'https://dev-kqcvt5qlx045drmf.us.auth0.com'
 }
 ```
