@@ -5,7 +5,7 @@ improved user experience.
 
 ## Coach notes
 
-The big concept here is [tokens](https://swe-docs.netlify.app/backend/tokens).
+The big concept here is [tokens](https://mv-swe-docs.netlify.app/backend/tokens).
 We're using JWTs to demonstrate this.
 
 The framework the apprentice is working with might already have pushed them in
