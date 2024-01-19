@@ -11,9 +11,9 @@ We have also refactored into separate routes for readability.
 
 The big concepts at play are
 
-- [encryption](https://swe-docs.netlify.app/backend/encryption)
-- [hashing](https://swe-docs.netlify.app/backend/hashing)
-- the [basic auth](https://swe-docs.netlify.app/backend/basic-auth.html)
+- [encryption](https://mv-swe-docs.netlify.app/backend/encryption)
+- [hashing](https://mv-swe-docs.netlify.app/backend/hashing)
+- the [basic auth](https://mv-swe-docs.netlify.app/backend/basic-auth.html)
   protocol
 
 The primers linked to above are designed for colleagues to brush up on the
@@ -91,7 +91,7 @@ curl -v -XPOST \
 Note that `dGVzdEB1c2VyLmNvbTpwYXNzd29yZDEyMw==` is the Base 64 encoding of the
 string `'test@user.com:password123'`. This is the standard way of sending
 credentials with basic auth. See
-[basic auth](https://swe-docs.netlify.app/backend/basic-auth.html) for more
+[basic auth](https://mv-swe-docs.netlify.app/backend/basic-auth.html) for more
 information.
 
 You could add a `console.log(users)` in this endpoint to verify that the
