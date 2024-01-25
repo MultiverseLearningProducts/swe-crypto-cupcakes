@@ -46,16 +46,16 @@ router.get('/', (req, res) => {
   res.json(decodedCupcakes)
 })
 
-// get a snippet by ID
+// get a cupcake by ID
 router.get('/:id', (req, res) => {
   const cupcakeId = parseInt(req.params.id)
-  const cupcake = cupcakes.find(cupcake => cupcake.id === cupcakeId)
-
+  let cupcake = cupcakes.find(cupcake => cupcake.id === cupcakeId)
+  
   if (!cupcake) {
     return res.status(404).json({ error: 'Cupcake not found' })
   }
 
-  cupcake.instructions = decrypt(cupcake.instructions)
+  cupcake = {...cupcake, 'instructions': decrypt(cupcake.instructions)}
   res.json(cupcake)
 })
 
