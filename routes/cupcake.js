@@ -47,7 +47,7 @@ router.get('/', requiresAuth(), (req, res) => {
   res.json(decryptedCupcakes)
 })
 
-// get a snippet by ID
+// get a cupcake by ID
 router.get('/:id', requiresAuth(), (req, res) => {
   const cupcakeId = parseInt(req.params.id)
   let cupcake = cupcakes.find(cupcake => cupcake.id === cupcakeId)
