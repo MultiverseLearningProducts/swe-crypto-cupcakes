@@ -33,18 +33,18 @@ router.post('/', requiresAuth(), (req, res) => {
 router.get('/', requiresAuth(), (req, res) => {
   const { flavor } = req.query
 
-  const decodedCupcakes = cupcakes.map(cupcake => ({
+  const decryptedCupcakes = cupcakes.map(cupcake => ({
     ...cupcake,
     instructions: decrypt(cupcake.instructions)
   }))
   if (flavor) {
-    const filteredCupcakes = decodedCupcakes.filter(
+    const filteredCupcakes = decryptedCupcakes.filter(
       cupcake => cupcake.flavor.toLowerCase() === flavor.toLowerCase()
     )
     return res.json(filteredCupcakes)
   }
 
-  res.json(decodedCupcakes)
+  res.json(decryptedCupcakes)
 })
 
 // get a cupcake by ID
