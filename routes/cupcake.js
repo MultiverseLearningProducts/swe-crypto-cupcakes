@@ -21,6 +21,7 @@ router.post('/', requiresAuth(), (req, res) => {
 
   const cupcake = {
     id: ++id,
+    ownerId: req.oidc.user.email,
     flavor,
     instructions
   }
@@ -53,11 +54,29 @@ router.get('/:id', requiresAuth(), (req, res) => {
   let cupcake = cupcakes.find(cupcake => cupcake.id === cupcakeId)
 
   if (!cupcake) {
-    return res.status(404).json({ error: 'Cupcake not found' })
+    return res.status(404).json({ error: "Cupcake not found" });
   }
 
-  cupcake = {...cupcake, instructions: decrypt(cupcake.instructions)}
-  res.json(cupcake)
-})
+  cupcake = { ...cupcake, instructions: decrypt(cupcake.instructions) };
+  res.json(cupcake);
+});
+
+// delete a cupcake by ID
+// only the cupcake's owner is allowed to do this
+router.delete("/:id", requiresAuth(), (req, res) => {
+  for (let i = 0; i < cupcakes.length; i++) {
+    if (cupcakes[i].id == req.params.id) {
+      const cupcake = cupcakes[i];
+
+      if (cupcake.ownerId != req.oidc.user.email) {
+        return res.status(403).json({ error: "Forbidden" });
+      }
+
+      cupcakes.splice(i, 1);
+      return res.status(200).json({ message: "Successfully deleted cupcake" });
+    }
+  }
+  return res.status(404).json({ error: "Cupcake not found" });
+});
 
 module.exports = router;
