@@ -10,8 +10,8 @@ jest.mock("express-openid-connect", () => ({
   }),
   requiresAuth: jest.fn(() => {
     return (req, res, next) => {
-      const id = req.headers.authorization.split(" ")[1];
-      req.oidc = { user: { id } };
+      const email = req.headers.authorization.split(" ")[1];
+      req.oidc = { user: { email } };
       next();
     };
   }),
@@ -29,7 +29,7 @@ describe("/CUPCAKES endpoint", () => {
     instructions: "swirl chocolate and vanilla",
   };
   let newCupcakeID;
-  const testOwnerId = 5;
+  const testOwnerId = "someuser@somedomain.com";
 
   beforeEach(() => {
     jest.clearAllMocks();
