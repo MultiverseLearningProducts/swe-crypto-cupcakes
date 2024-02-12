@@ -4,7 +4,6 @@ const routes = require('./routes');
 const { auth } = require('express-openid-connect');
 
 const app = express()
-const PORT = 4000
 
 const config = {
   authRequired: false,
@@ -15,7 +14,6 @@ const config = {
   issuerBaseURL: 'https://dev-kqcvt5qlx045drmf.us.auth0.com'
 };
 
-
 app.use(express.json())
 
 app.use(auth(config))
@@ -23,7 +21,4 @@ app.use(auth(config))
 app.use('/user', routes.user)
 app.use('/cupcakes', routes.cupcake);
 
-// start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`)
-})
+module.exports = app;
